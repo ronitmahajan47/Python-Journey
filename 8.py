@@ -1,8 +1,10 @@
 list = []
+i = 0
 num = int(input("Enter total number of elements in your list: "))
 
-for i in range(num) :
+while i<num :
     list.append(input(f"Enter your DATA {i+1} = "))
+    i += 1
 
 temp = list.copy()
 temp.reverse()
