@@ -1,4 +1,4 @@
-#Selection sorting
+#Bubble sorting
 
 myList = []
 size = int(input("\nEnter the size of list : "))
@@ -9,11 +9,8 @@ for i in range(size) :
 print("\nList before sorting : ",myList)
 
 for i in range(size-1):
-    minIndex = i
-    for j in range(i+1 , size):
-        if myList[j] < myList[minIndex] :
-            minIndex = j
-
-    myList[i] , myList[minIndex] = myList[minIndex] , myList[i]
+    for j in range(size-i-1):
+        if myList[j+1] < myList[j] :
+            myList[j+1] , myList[j] = myList[j] , myList[j+1]
 
 print("List after sorting : ",myList)
